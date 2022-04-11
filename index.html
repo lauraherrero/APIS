@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e3c86baeed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Práctica APIS</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <form action="" method="post" enctype="multipart/form-data" target="_blank">
+            <h2>Selecciona un video para reproducir</h2>
+            <input type="file" name="archivosubido" id="videoSelected" accept=".webm, .mp4, .ogv" />
+        </form>
+    
+        <figure>
+            <video id="videoFile" controls width="550" accept=".webm, .mp4, .ogv">
+                El video no es soportado por el navegador
+            </video>
+        </figure>
+        <div>
+            <button onclick="document.getElementById('videoFile').play();"><i class="fa-solid fa-play"></i></button>
+            <button onclick="document.getElementById('videoFile').pause();"><i class="fa-solid fa-pause"></i></button>
+            <button onclick="document.getElementById('videoFile').volume += 0.1;"><i class="fa-solid fa-volume-high"></i></button>
+            <button onclick="document.getElementById('videoFile').volume -= 0.1;"><i class="fa-solid fa-volume-low"></i></button>
+            <button id="btnMutted" onclick="muted()"><i class="fa-solid fa-volume-xmark"></i></button>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
